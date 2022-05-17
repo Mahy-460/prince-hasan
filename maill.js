@@ -24,10 +24,11 @@ function submitForm(e){
   var number = getElementVal('number');
   var Transaction = getElementVal('Transaction');
   var emailid = getElementVal('emailid');
-  var package = getElementVal('package');
+
+  //var package = getElementVal('package');
 
 
-  saveMessages(name, number, Transaction, emailid, package);
+  saveMessages(name, number, Transaction, emailid,);
 
   //   enable alert
   document.querySelector(".alert").style.display = "block";
@@ -42,7 +43,7 @@ function submitForm(e){
 
 };
 
-const saveMessages = (name,number,Transaction,emailid,package ) => {
+const saveMessages = (name,number,Transaction,emailid) => {
   var newContactForm =  contactFormDB.push();
 
   newContactForm.set({
@@ -50,7 +51,7 @@ const saveMessages = (name,number,Transaction,emailid,package ) => {
     number : number,
     Transaction : Transaction,
     emailid : emailid,
-    package : package,
+  //package : package,
   });
 };
 
